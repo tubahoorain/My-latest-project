@@ -1,0 +1,51 @@
+.dancing-script-<uniquifier> {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  h2{
+    font-family:"Dancing Script", cursive;;
+  }
+
+#header .fixed-top{
+box-shadow: 0 0 10px 0 #e8e6e6 ;
+}
+#header .navbar-nav .nav-item .nav-link{
+color: black;
+padding: 12px;
+text-align: center;
+}
+#header .navbar-nav .nav-item .nav-link:hover,
+#header .navbar-nav .nav-item .nav-link.active{
+    color: rgb(235, 69, 69);
+}
+.home .home-banner-1,
+.home .home-banner-2{
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: cover;
+    min-height: 650px;
+    position: relative;
+}
+.home .home-banner-1{
+    margin-top: 10px;
+    background-image: url(images/slide1.jpg);
+}
+.home .home-banner-2{
+    margin-top: 10px;
+    background-image: url(images/slide2.jpg);
+}
+.home .home-banner .home-banner-text{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-110%, -50%);
+}
+.home .home-banner .home-banner-text h1{
+    font-size: 6rem;
+}
+.home .carousel-indicators [data-bs-target]{
+    background-color: rgb(235, 69, 69);
+    width: 3rem;
+}
