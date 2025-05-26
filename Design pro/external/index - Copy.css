@@ -1,0 +1,58 @@
+/* Common styles for all screen sizes */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* Responsive styles for small screens (e.g., mobile devices) */
+/* @media screen and (max-width: 600px) {
+  .carousel-container {
+    max-width: 100%;
+  }
+
+  .carousel {
+    flex-direction: column;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  .car-img {
+    height: auto;
+  }
+
+  .prev,
+  .next {
+    font-size: 24px;
+    padding: 8px;
+  } */
+
+  .about-paragraph {
+    font-size: 14px;
+  }
+
+  .abimg {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+
+  /* Add more responsive styles for small screens as needed */
+
+/* Responsive styles for medium screens (e.g., tablets) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Add your medium screen styles here */
+}
+
+/* Responsive styles for large screens (e.g., desktops) */
+@media screen and (min-width: 1025px) {
+  /* Add your large screen styles here */
+}

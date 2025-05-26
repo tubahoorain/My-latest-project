@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Pro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="external/index.css">
+
+
+  <!-- nav -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky">
+    <div class="container-fluid">
+      <a href="#"> <img src="img/logo2.png" style="height: 50px; width: 50px;"></a>
+      &nbsp;&nbsp;&nbsp; <a class="navbar-brand" href="#" id="logo">Design Pro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" type="button" id="showServicesButton321" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#video">Tutorials</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="showContactUsButton321msg" type="button">Contact Us</a>
+          </li>
+        </ul>
+        <li class="nav-item">
+          <button style="margin-right: 30px;" class="sign-in-button">Sign In</button>
+        </li>
+        </ul>
+
+
+
+        <div id="overlay321msg"></div>
+        <div class="contact-us321msg">
+          <span class="close-button321msg" onclick="closeContactUs321msg()">&times;</span>
+          <h2>Contact Us</h2>
+          <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" style="width: auto;"></textarea><br><br>
+            <input type="button" value="Send Message" onclick="sendMessage()">
+          </form>
+        </div>
+
+
+
+
+        <div class="user-info" style="display: none;">
+          <span class="user-name"></span>
+          <span class="user-initial"></span>
+          <div class="dropdown-content">
+            <a href="#" class="edit-account"><span class="edit-icon"></span>Edit Account</a>
+            <a href="#" class=" log-out"><span class=" log-out-icon"></span>Logout</a>
+
+          </div>
+        </div>
+      </div>
+
+      </ul>
+    </div>
+
+    <div class="sign-in-form">
+      <img src="img/cross.png" class="close-btn">
+      <h3 class="section-title" id="join">SIGN-IN</h3>
+      <form>
+        <input type="text" placeholder="Name" id="nameInput" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="user-info" style="display: none;"><button id="applyButton" class="btn btn-success"
+        style="padding-right:0px 20px; margin-right: 10px;">Apply Now</button>
+
+  </nav>
+
+
+  <div id="overlay">
+    <div id="application-form">
+      <span class="close-button321" onclick="closeServices21()">&times;</span>
+      <h2>Application Form</h2>
+      <form id="courseForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="course">Select a Course:</label>
+        <select id="course" name="course">
+          <option value="course">Choose your course</option>
+          <option value="course1">Office Automation</option>
+          <option value="course2">Web Design</option>
+          <option value="course3">Web Development</option>
+          <option value="course4">mobile-app-development</option>
+          <option value="course5">SEO</option>
+          <option value="course6">AutoCAD</option>
+          <option value="course7">Desktop App Development</option>
+          <option value="course8">Advance Excel</option>
+          <option value="course9">Freelancing</option>
+          <option value="course10">WordPress</option>
+          <option value="course11">Cloud Computing</option>
+          <option value="course12">2D and 3D games</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <div id="overlay321"></div>
+  <div id="services321">
+    <span class="close-button321" onclick="closeServices321()">&times;</span>
+    <h2>Our Services</h2>
+    <p>Explore our range of services designed to empower your software engineering journey:</p>
+    <ul>
+      <li>Comprehensive Software Engineering Courses</li>
+      <li>Industry-Standard Coding Bootcamps</li>
+      <li>Personalized Coding Mentorship</li>
+      <li>Hands-On Project Development</li>
+      <li>Job Placement Assistance</li>
+      <li>Networking and Community Events</li>
+    </ul>
+    <p>Whether you're a beginner or an experienced coder, we have the perfect service to help you succeed in the world
+      of software engineering.</p>
+      <p>For Any other Query please <a href="#">Contact Us</a></p>
+  </div>
+
+
+
+
+
+  
+    </div>
+  </div>
+  <!-- end nav -->
+</head>
+
+<body>
+  <!-- carusel -->
+  <div class="carousel-container">
+    <br>
+    <div class="carousel">
+      <div class="slide image-fluid"><img class="car-img" src="img/1carusel.jpg" alt="Image 1"></div>
+      <div class="slide image-fluid"><img class="car-img" src="img/2carusel.jpg" alt="Image 2"></div>
+      <div class="slide image-fluid"><img class="car-img" src="img/3carusel.jpg" alt="Image 3"></div>
+      <!-- Add more slides as needed -->
+    </div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+
+  <br><br>
+  <hr class="light">
+  <br><br>
+   <!-- video  -->
+   <section id="video"></section>
+   <center>
+    <h2 class="text-light">Our Crash courses for you.</h2>
+  </center>
+  <br>
+  <div class="video-container">
+
+    <!-- YouTube video embeds -->
+    <div class="video-iframe">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/BsDoLVMnmZs" title="HTML Tutorial For Beginners In Hindi (With Notes) 🔥" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <br><br>
+      <p class="text-light">Learn HTML in one video full Tutorial in Hindi. HTML Learn in one video.</p>
+    </div>
+    <div class="video-iframe">
+    
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/Edsxf_NBFrw" title="CSS Tutorial In Hindi (With Notes) 🔥" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br><br>
+      <p class="text-light">Learn CSS in one video full Tutorial in Hindi. CSS Learn in one video.</p>
+    </div>
+    <div class="video-iframe">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/hKB-YGF14SY" title="JavaScript Tutorial In Hindi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br><br>
+      <p class="text-light">Learn JavaScript in one video full Tutorial in Hindi.JavaScript Learn in one video.</p>
+    </div>
+    <div class="video-iframe">
+      <iframe width="768" height="480" src="https://www.youtube.com/embed/EFlVQTyKpco" title="Full AutoCAD Course For Beginners | From Scratch to Professional | More that 6+ Hours" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
+      <p class="text-light">Learn 2D and 3D AutoCAD full in one Tutorial and become a autocad master in 6 hours.</p>
+    </div>
+    <div class="video-iframe">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/HVjjoMvutj4" title="Web Development Complete Course [30 Hours] | Learn Full Stack Web Development From Basic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
+      <p class="text-light">Learn Web Development in one video full Tutorial in Hindi. Become a Fullstack developer in 3 hours.</p>
+    </div>
+    <div class="video-iframe">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/1SnPKhCdlsU" title="Php Tutorial for Beginners in Hindi with MySQL Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <br><br>
+      <p class="text-light">PHP full course in one video full Tutorial in hindi. With mysql projects, all in one video.</p>
+    </div>
+    <div class="video-iframe">
+      <iframe width="780" height="435" src="https://www.youtube.com/embed/QE5oQh63gGE" title="Bootstrap Tutorial in Hindi With 2 Projects for Beginners | Complete Bootstrap 5 Tutorial in Hindi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
+      <p class="text-light">Make Responsive Website Designs using Bootstrap5 and make your own websites. </p>
+    </div>
+    <div class="video-iframe">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/yOzvcIhLzRs" title="How to Earn with Fiverr Complete Course in Hindi Urdu | Basic to Pro Level" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <br><br>
+      <p class="text-light">How to make an account on fiverr and become a successfull freelancer, Money making course.</p>
+    </div>
+    <div class="video-iframe">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/SH4oyV5AJ6A" title="Microsoft Office Full Crash Course With Certificate.Word, Excel, Powerpoint,Access, Outlook Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br><br>
+      <p class="text-light">Zero to Hero in Office Automation complete course in one video.</p>
+    </div>
+  </div>
+  <!-- video end -->
+
+<br><br>
+<div class="course-container container-fluid">
+  <br>
+  <section id="courses">
+    <h1 class="courseh1">Our Courses</h1>
+    <br>
+
+
+
+      <div class="courses1">
+        <h2 class="text-light" style="margin-bottom: 10px;">Microsoft Office</h2>
+
+        <!-- cards -->
+        <div class="card">
+          <img src="img/office.png" alt="Image">
+          <h3>Office Automation</h3>
+          <p>Streamline your office tasks with automation tools and boost productivity in the modern
+            workplace.</p>
+        </div>
+
+        <div class="card">
+          <img src="img/excel.png" alt="Image">
+          <h3>Ms Excel Advance</h3>
+          <p> Unlock the full potential of Excel with advanced functions, data analysis, and
+            automation.</p>
+        </div>
+
+        <div class="card">
+          <img src="img/access.png" alt="Image">
+          <h3>MS Access Advance</h3>
+          <p> Microsoft Access offers user-friendly database management, ideal for small to mid-sized projects.</p>
+        </div>
+
+        <div class="card">
+          <img src="img/outlook.png" alt="Image">
+          <h3>MS Outlook</h3>
+          <p>
+            Microsoft Outlook is a versatile email and productivity app for efficient communication and organization.
+          </p>
+
+        </div>
+      </div>
+      <div class="courses2">
+        <br>
+        <h2 class="text-light">Website Management Courses</h2>
+
+        <div class="card">
+          <img src="img/web design.png" alt="Image">
+          <h3>Web Designing</h3>
+          <p>Craft visually stunning and user-friendly websites with expertise in web design
+            principles and tools.</p>
+
+        </div>
+
+        <div class="card">
+          <img src="img/web development.png" alt="Image">
+          <h3>Web Development</h3>
+          <p>Learn the art of creating dynamic and interactive websites, mastering coding languages
+            and frameworks.</p>
+
+        </div>
+
+        <div class="card">
+          <img src="img/Wordpress.png" alt="Image">
+          <h3>WordPress</h3>
+          <p>Master the art of building websites and blogs using the versatile WordPress platform.</p>
+
+        </div>
+
+
+        <div class="card">
+          <img src="img/seo.png" alt="Image">
+          <h3>S.E.O</h3>
+          <p>Elevate your online presence by mastering SEO techniques for higher search engine
+            rankings.</p>
+
+        </div>
+      </div>
+      <div class="courses3">
+        <br>
+        <h2 class="text-light">Applications</h2>
+
+        <div class="card">
+          <img src="img/mobile.png" alt="Image">
+          <h3>Mobile Application Development</h3>
+          <p>Dive into the world of app creation, from Android to iOS, and launch your mobile
+            application career.</p>
+
+        </div>
+
+        <div class="card">
+          <img src="img/desktop.png" alt="Image">
+          <h3>Desktop Application Development</h3>
+          <p>Build desktop applications for Windows, macOS, or Linux, and shape the software
+            world.</p>
+
+        </div>
+
+        <div class="card">
+          <img src="img/game.png" alt="Image">
+          <h3>2D Game Design and Development</h3>
+          <p>Create captivating 2D games, from concept to launch, and make your mark in the gaming
+            industry.</p>
+
+        </div>
+        <div class="card">
+          <img src="img/animation.png" alt="Image">
+          <h3>Video Animation</h3>
+          <p> Elevate your storytelling with mesmerizing video animation, captivating audiences with visual wonders.</p>
+
+        </div>
+      </div>
+
+      <div class="courses4">
+        <br><br><br>
+        <h2 class="text-light">Skill courses</h2>
+
+        <div class="card">
+          <img src="img/freelancer.png" alt="Image">
+          <h3>Freelancing</h3>
+          <p> Embark on a freelance journey, offering your skills to clients worldwide and enjoying
+            the freedom of remote work.</p>
+
+        </div>
+
+        <div class="card">
+          <img src="img/autocad.png" alt="Image">
+          <h3>AutoCAD 2d & 3d</h3>
+          <p>Become a CAD expert, designing in both 2D and 3D dimensions for architectural and
+            engineering projects.</p>
+
+        </div>
+        <div class="card">
+          <img src="img/cloud.png" alt="Image">
+          <h3>Cloud Computing</h3>
+          <p>Harness the cloud's power for scalable, cost-effective, and reliable IT solutions in the
+            digital age.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- end cards -->
+ 
+
+
+  <br><br>
+  <!-- about -->
+  <button id="but" class="btn btn-primary">Know About Us</button>
+  <section id="about"></section>
+  <div class="course-container text-light">
+    <p id="para">
+      
+  <strong class="about-text">About Us</strong>
+  <br><br>
+        Welcome to Design Pro, your premier destination for IT learning! Our mission is to empower individuals and
+          organizations with the knowledge and skills needed to excel in the ever-evolving world of information
+          technology. We are passionate about bridging the gap between aspiring IT professionals and the expertise
+          required to succeed in this dynamic field.
+  <br>
+        Design Pro is a team of dedicated IT experts, instructors, and content creators who share a common goal: to
+          make IT learning accessible, engaging, and effective. Our diverse team brings a wealth of industry experience,
+          certifications, and a deep commitment to helping learners of all levels reach their IT career aspirations.
+  <br>
+        At Design Pro, we offer a comprehensive range of IT courses, tutorials, and resources tailored to meet the
+          needs of both beginners and experienced professionals. Our courses cover a wide spectrum of IT topics, including
+          programming, cybersecurity, cloud computing, data science, and more.
+  <br>
+        Key features of our offerings include:
+      <br>  <br><strong>Expert Instructors:</strong><br> Learn from industry experts who bring real-world experience into the
+            virtual classroom.
+      <br>  <br><strong>Interactive Learning:</strong> <br>Engage with hands-on labs, quizzes, and projects that reinforce your
+            understanding.
+      <br> <br> <strong>Flexible Scheduling:</strong><br> Study at your own pace with on-demand courses that fit your busy
+            lifestyle.
+      <br>  <br><strong>Certification Preparation:</strong> <br>Prepare for industry-recognized certifications with our targeted
+            exam prep courses.
+        
+  <br><br>
+        Choosing Design Pro for your IT learning journey means choosing excellence, innovation, and support. Here,
+          you'll find a community of learners and experts who are passionate about helping you achieve your IT career
+          goals. Join us at Design Pro and embark on a transformative learning experience that will shape your future in
+          IT.</p>
+  
+  
+  
+  </div>
+<!-- end about -->
+  <footer>
+    <hr>
+    <h2>Stay connect with us</h2>
+    <hr>
+    <br>
+    <div class="footer-content text-light">
+      
+
+      <div class="footer-logo">
+        <img src="img/logo2.png" alt="IT Learning Logo">
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#join">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#video">Tutorials</a></li>
+          
+        </ul>
+        <p>Used Technologies</p>
+      <a href="docx/Design pro orignal.docx">  <button class="btn btn-primary">Download</button></a>
+      </div>
+      <div class="footer-social">
+        <h3>Connect with Us</h3>
+        <ul>
+          <li><a href="https://facebook.com/"><img style="height: 26px; width: 26px;" src="icon/fb.png" alt="Facebook">  &nbsp;&nbsp;  Facebook</a></li>
+          <li><a href="https://twitter.com/?lang=en"><img style="height: 26px; width: 26px;" src="icon/twitter.png" alt="Twitter">  &nbsp;&nbsp;  Twitter</a></li>
+          <li><a href="https://gmail.com/"><img style="height: 26px; width: 26px;" src="icon/gmail.png" alt="Gmail">  &nbsp;&nbsp;  Gmail</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 <a href="#">Design Pro</a></p>
+    </div>
+  </footer>
+  <!-- <script> -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="external/js.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<script>
+   
+ 
+</script>
+  <!-- </script> -->
+
+</body>
+
+</html>
