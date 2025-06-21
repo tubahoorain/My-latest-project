@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Profile Manager</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f0f8ff;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .card {
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="text-center text-primary mb-4">Student Profile Manager</h2>
+  
+  <div class="card p-4">
+    <form id="studentForm">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" id="name" placeholder="Student Name" required>
+        </div>
+        <div class="form-group col-md-4">
+          <input type="email" class="form-control" id="email" placeholder="Email" required>
+        </div>
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" id="course" placeholder="Course" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Add Student</button>
+    </form>
+  </div>
+
+  <div class="card mt-4 p-4">
+    <h4 class="mb-3">Student List</h4>
+    <table class="table table-bordered table-striped" id="studentTable">
+      <thead class="thead-dark">
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Course</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Student rows will appear here -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  let count = 0;
+
+  $('#studentForm').submit(function(e) {
+    e.preventDefault();
+    
+    const name = $('#name').val();
+    const email = $('#email').val();
+    const course = $('#course').val();
+
+    count++;
+
+    const row = `
+      <tr>
+        <td>${count}</td>
+        <td>${name}</td>
+        <td>${email}</td>
+        <td>${course}</td>
+        <td><button class="btn btn-danger btn-sm deleteBtn">Delete</button></td>
+      </tr>
+    `;
+
+    $('#studentTable tbody').append(row);
+    $('#studentForm')[0].reset();
+  });
+
+  $(document).on('click', '.deleteBtn', function() {
+    $(this).closest('tr').remove();
+  });
+</script>
+
+</body>
+</html>
