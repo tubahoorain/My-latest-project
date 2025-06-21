@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Swap Value</title>
+  <style>
+    body {
+      background: #3ccccc;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .box {
+      background: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    input {
+      width: 200px;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 16px;
+      margin: 10px 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Swap Value</h2>
+    <input type="text" id="val1" placeholder="Enter first value"><br>
+    <input type="text" id="val2" placeholder="Enter second value"><br>
+    <button id="swapBtn">Swap</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#swapBtn').click(function() {
+      var a = $('#val1').val();
+      var b = $('#val2').val();
+      $('#val1').val(b);
+      $('#val2').val(a);
+    });
+
+    $('#clearBtn').click(function() {
+      $('#val1').val('');
+      $('#val2').val('');
+    });
+  </script>
+
+</body>
+</html>
